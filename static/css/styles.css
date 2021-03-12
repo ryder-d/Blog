@@ -1,0 +1,111 @@
+:root {
+    --color-light: #b7b2b5;
+    --color-bg-dark: #242b40;
+    --color-bg-dark-lighter: #374262;
+    --color-code-bg-dark: #242b40;
+    --color-code: green;
+    --color-white: #eee;
+}
+
+html, body {
+    margin: 0; 
+    padding: 0;
+    background-color: var(--color-bg-dark);
+    color: var(--color-light);
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    font-family: 'Ubuntu', sans-serif;
+}
+code {
+    background: var(--color-code-bg-dark);
+    color: var(--color-code);
+}
+
+footer {
+    text-transform: uppercase;
+    position: fixed; 
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+div.landing-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+div.landing-container > h1.name {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: var(--color-white);
+}
+
+div.landing-container > h2.info {
+    font-size: 12px;
+    line-height: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+div.landing-container > div.icons > a {
+    margin: 5px;
+    text-decoration: none;
+}
+
+div.landing-container > div.icons > a > img {
+    margin-top: 20px;
+    width: 30px;
+    height: 30px;
+}
+
+.site-title {
+    margin: 0.25rem 0rem ;
+}
+
+.site-subtitle {
+    font-weight: bolder;
+}
+
+.blog-post {
+    background-color: var(--color-bg-dark-lighter);
+    border-radius: 10px;
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.blog-post > h2 {
+    margin-bottom: 0.30rem;
+}
+
+.blog-post > p {
+    margin: 0.2rem;
+}
+
+.author-panel {
+    background-color: var(--color-bg-dark-lighter);
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 480px) {
+    div.landing-container > h1.name {
+        font-size: 16px;
+    }
+    
+    div.landing-container > h2.info {
+        font-size: 10px;
+    }
+
+    div.landing-container > div.icons > a > img {
+        width: 24px;
+        height: 24px;;
+    }
+}

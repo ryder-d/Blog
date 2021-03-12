@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load markdown_extras %}
+
+{% block content %}
+    
+    <div class="container">
+        <!-- TOP BANNER HERO -->
+        <div class="hero">
+            <div class="">
+              <h1 class="site-title">Devon Ryder's Blog</h1>
+              <p class="site-subtitle">Code - Linux - Technology</p>
+            </div>
+        </div>
+
+        <!-- BLOG POSTS LISTING -->
+        <div class="row">
+            <!-- Iterate and display blog posts from list (context) by views.py. 
+            NOTE: also passed as object_list -->
+            {% for post in post_list %}
+                <div class="blog-post">
+                    <h2 class="">{{ post.title }}</h2>
+                    <p class="">Author: {{ post.author }} - Posted on: {{ post.created_on }}</p>
+                    <p class="blog-post__desc">{{ post.description}}</p>
+                    <p class=""><span> <a href="{% url 'blog_post' post.slug  %}" class="">Read More &rarr;</a></span></p>
+                    
+                </div> <!-- END blog post item-->
+            {% endfor %}
+        </div> <!-- END row-->
+
+    </div> <!-- END CONTAINER -->
+
+     <!-- FOOTER SECTION -->
+     <footer class="e">
+        <div class=""><p>&copy; - <strong>Devon Ryder</strong> - 2021.</p></div>
+    </footer>
+{% endblock content %}

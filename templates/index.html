@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <main class="page-content" aria-label="Content">
+        <div class="landing-container">
+            <h1 class="name"> Devon Ryder </h1>
+            <h2 class="info">IT Technician | Programmer | Linux Enthusiast</h2>
+            
+            <div class="icons">
+                <a href="https://www.linkedin.com/in/devon-ryder-9ba85483" target="_blank">
+                    <img src="{% static 'img/linkedin.svg'%}" title="Linkedin Logo" alt="linkedin Logo">
+                </a>
+                <a href="https://github.com/DevonRyder" target="_blank">
+                    <img src="{% static 'img/github.svg'%}" title="Github Logo" alt="Github Logo">
+                </a>
+                <a href="https://twitter.com/Ryder807" target="_blank">
+                    <img src="{% static 'img/twitter.svg'%}" title="Twitter Logo" alt="Twitter Logo">
+                </a>
+                <a href="mailto:devon@devonryder.com">
+                    <img src="{% static 'img/envelope.svg'%}" title="Devon's Email" alt="Devon's Email">
+                </a>
+            </div><br/>
+            <a href="{% url 'blog_post_list' %}" class="">Read Blog &rarr;</a>
+        </div>
+    </main>
+{% endblock content %}
+

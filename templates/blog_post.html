@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load markdown_extras %}
+
+{% block content %}
+    <div class="container">
+        <div class="hero">
+            <div class="">
+              <h1 class="site-title">Devon Ryder's Blog</h1>
+              <p class="site-subtitle">Code - Linux - Technology</p>
+            </div>
+        </div>
+
+        <h1>{{ post.title }}</h1>
+
+        <p>{{ post.body | markdown | safe }}</p>
+
+        <div class="author-panel">
+            <p><strong>Devon Ryder</strong></p>
+            <p>
+                Information Technology Technician, Computer Programmer && Linux Enthusiast.
+                Currently learning development with Django and Docker. I also have interest
+                in networking and security.
+            </p>
+        </div>     
+    </div>
+    
+    <!-- FOOTER SECTION -->
+    <footer class="">
+        <div class=""><p>&copy; - <strong>Devon Ryder</strong> - 2021.</p></div>
+    </footer>
+
+{% endblock content %}
